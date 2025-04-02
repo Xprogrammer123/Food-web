@@ -10,7 +10,7 @@ Real-Time Tracking: Track the biker’s location on a map during delivery.
 Order History: View past orders and reorder favorites.
 Email Notifications: Receive order confirmations and updates via email.
 
-# For Vendors
+# For Vendors , Customers ,Admin 
 Menu Management: Add, edit, or remove food items from the menu.
 Order Dashboard: View incoming orders and update their status (e.g., preparing, ready).
 Profile Management: Update vendor details, such as location and operating hours.
