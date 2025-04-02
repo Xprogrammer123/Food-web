@@ -1,4 +1,5 @@
-##Food Delivery Platform
+## Food Delivery Platform
+
 Welcome to the Food Delivery Platform, a full-stack web application designed to connect customers, vendors, and bikers for a seamless food ordering and delivery experience. This platform offers real-time tracking, email notifications, vendor management, and more, built with modern technologies to ensure scalability and performance.
 
 ##Features
