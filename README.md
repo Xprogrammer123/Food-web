@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+##Food Delivery Platform
+Welcome to the Food Delivery Platform, a full-stack web application designed to connect customers, vendors, and bikers for a seamless food ordering and delivery experience. This platform offers real-time tracking, email notifications, vendor management, and more, built with modern technologies to ensure scalability and performance.
 
-## Getting Started
+##Features
+For Customers
+Browse Vendors: Explore a list of food vendors with menus and ratings.
+Place Orders: Add items to the cart and place orders with ease.
+Real-Time Tracking: Track the biker’s location on a map during delivery.
+Order History: View past orders and reorder favorites.
+Email Notifications: Receive order confirmations and updates via email.
 
-First, run the development server:
+##For Vendors
+Menu Management: Add, edit, or remove food items from the menu.
+Order Dashboard: View incoming orders and update their status (e.g., preparing, ready).
+Profile Management: Update vendor details, such as location and operating hours.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##For Bikers
+Order Assignment: Accept delivery requests from vendors.
+Real-Time Tracking: Share location with customers and see customer locations on a map.
+Delivery Status: Mark orders as picked up or delivered.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##General Features
+User Authentication: Secure login and registration for customers, vendors, and bikers.
+Real-Time Updates: Powered by Socket.IO for live tracking and order status changes.
+Email System: Automated emails for order confirmations, updates, and more.
+Responsive Design: Works seamlessly on desktop and mobile devices.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+#Tech Stack
+#Frontend
+Next.js: React framework for server-side rendering and static site generation.
+Google Maps JavaScript API: For real-time location tracking.
+Socket.IO-Client: For real-time communication with the backend.
+CSS: Styled with custom CSS or a library like Tailwind CSS (optional).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#Backend
+Node.js: JavaScript runtime for the server.
+Express.js: Web framework for building APIs.
+Socket.IO: Real-time bidirectional event-based communication.
+MongoDB (optional): Database for storing users, orders, and vendor data.
+Nodemailer (optional): For sending email notifications.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#Tools & Services
+Google Cloud Platform: For the Maps API key.
+Yarn: Package manager for dependency management.
+Environment Variables: Managed via .env.local for secure configuration.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##Made with love by Xprogrammer ❤️
