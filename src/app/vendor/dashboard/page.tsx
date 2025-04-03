@@ -73,6 +73,39 @@ export default function VendorDashboard() {
           />
         </div>
 
+ {/* Performance Chart */}
+      <div className="bg-white rounded-lg p-4 border">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="font-semibold">Performance</h2>
+          <div className="flex items-center text-sm">
+            <span>Monthly</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 ml-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+        <div className="h-48 flex items-end justify-between">
+          {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day, i) => (
+            <div key={day} className="flex flex-col items-center">
+              <div
+                className={`w-8 ${i % 2 === 0 ? "bg-green-500" : "bg-orange-400"} rounded-t-sm`}
+                style={{
+                  height: `${Math.random() * 100 + 50}px`,
+                }}
+              ></div>
+              <span className="text-xs mt-2 text-gray-500">{day}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
         {/* Recent Orders Section */}
         <div className="w-full">
           <RecentOrders />
