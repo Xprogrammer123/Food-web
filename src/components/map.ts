@@ -15,7 +15,7 @@ const Map = ({ role }) => {
   // Initialize Google Maps
   useEffect(() => {
     const loader = new Loader({
-      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'I_NEED_THE_REAL_API_KEY',
+      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyCsHTOq3khjfbKGU4_KYuzZSVViaqjdiMQ',
       version: 'weekly',
     });
 
