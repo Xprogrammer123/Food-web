@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
 import io from 'socket.io-client';
 
+// Connect to your backend server
 const socket = io('http://localhost:3000', {
   reconnection: true,
 });
@@ -68,6 +69,7 @@ const Map = ({ role }) => {
       }
     };
 
+    // Listen for location updates from server
     socket.on('bikerLocation', (location) => {
       if (location && bikerMarker) {
         bikerMarker.setPosition(location);
@@ -82,6 +84,7 @@ const Map = ({ role }) => {
       }
     });
 
+    // Update location every 5 seconds
     const interval = setInterval(updateLocation, 5000);
 
     return () => {
@@ -91,11 +94,7 @@ const Map = ({ role }) => {
     };
   }, [role, map, bikerMarker, customerMarker]);
 
-  return (
-    <div>
-      <div ref={mapRef} style={{ height: '500px', width: '100%' }} />
-    </div>
-  );
+  return <div ref={mapRef} style={{ height: '500px', width: '100%' }} />;
 };
 
 export default Map;
