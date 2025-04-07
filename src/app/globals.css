@@ -6,7 +6,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-/* Hide scrollbar for WebKit-based browsers */
+
 ::-webkit-scrollbar {
   display: none;
 }

@@ -1,6 +1,6 @@
-import tailwindcss from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
-module.exports = {
+export default {
   darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -58,8 +58,9 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        border: "hsl(var(--border))",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies tailwindcss
+} satisfies Config;
