@@ -1,15 +1,17 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Header } from "@/components/header"
+import { Header } from "../../components/header"
 import { Card, CardContent } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { MapPin, Store } from "lucide-react"
-import { DeliverySuccessModal } from "@/components/delivery-success-modal"
+import { DeliverySuccessModal } from "../../components/delivery-success-modal"
 import Image from "next/image"
+import Map from "../../../../components/map"
+import { useRouter } from 'next/router';
 
 // Simulated data
 const initialTrackings = [
@@ -28,6 +30,8 @@ export default function TrackingPage() {
   const [selectedTracking, setSelectedTracking] = useState<string | null>(null)
   const [statusUpdate, setStatusUpdate] = useState("Pickup")
   const [showSuccessModal, setShowSuccessModal] = useState(false)
+    const router = useRouter();
+  const { role } = router.query;
 
   // Simulate selecting the first tracking by default
   useEffect(() => {
@@ -146,11 +150,12 @@ export default function TrackingPage() {
                 </Card>
               </div>
 
-              {/* Map */}
+            {/* Map */}
               <div className="h-full">
                 <Card className="p-0 h-full overflow-hidden">
                   <div className="relative w-full h-full min-h-[400px]">
-                    <Image src="/map-with-route.jpg" alt="Delivery route map" fill className="object-cover" />
+                   <p>Role: {role || 'Not set'}</p>
+                
                     <div className="absolute top-2 left-2 bg-white p-2 rounded-md shadow-md">
                       <h3 className="text-sm font-medium">Live Tracking</h3>
                     </div>

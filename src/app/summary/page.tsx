@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Auth from "@/lib/API/Auth";
+import Auth from "../../lib/API/Auth";
 
 type Order = {
   _id: string;

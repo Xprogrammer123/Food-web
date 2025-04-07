@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2020", 
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true, 
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",  // Changed to node for better module resolution
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "strictFunctionTypes": true, // Added for stricter function type checking
-    "strictNullChecks": true,    // Added for stricter null checks
+    "allowSyntheticDefaultImports": true, 
+    "forceConsistentCasingInFileNames": true, 
     "plugins": [
       {
         "name": "next"
@@ -22,8 +22,16 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "baseUrl": "." 
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Page Components/Restaurant Page Components/cartContext.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/Page Components/Restaurant Page Components/cartContext.js",
+    "tailwind.config.ts" 
+  ],
   "exclude": ["node_modules"]
 }
